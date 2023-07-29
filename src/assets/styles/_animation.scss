@@ -1,0 +1,38 @@
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+  
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0; /* Начальное значение прозрачности */
+    transform: translateY(10px); /* Начальное положение элемента */
+  }
+  100% {
+    opacity: 1; /* Конечное значение прозрачности */
+    transform: translateY(0); /* Конечное положение элемента */
+  }
+}
+@keyframes play {
+  0% {
+    bacground-position: 0;
+  }
+
+  to {
+    background-position: -800px;
+  }
+}
+@keyframes lineAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

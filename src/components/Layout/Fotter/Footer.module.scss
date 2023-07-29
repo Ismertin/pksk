@@ -1,0 +1,103 @@
+@import 'src/assets/styles/variable';
+
+.wrapper {
+  height: 500px;
+  padding: 50px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/footerback.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  > h1 {
+    color: $white_common;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding-bottom: 50px;
+  }
+
+  > form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .inputRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &:last-child {
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.footer_end {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  font-size: 14px;
+}
+
+.footer_map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  > a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    color: $dark;
+    transition: color 0.5s ease-in-out;
+    font-weight: 600;
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+
+  > .private {
+    font-size: 13px;
+  }
+}
+
+.map_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; // Размер контейнера, в котором находятся иконки
+
+  > a {
+    color: #fff; // Цвет иконок
+    width: 36px; // Задайте желаемый размер иконок
+    height: 36px;
+  }
+}

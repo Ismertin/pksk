@@ -1,0 +1,42 @@
+@import 'src/assets/styles/variable';
+@import 'src/assets/styles/animation';
+
+// Button.module.scss
+@import 'src/assets/styles/variable';
+@import 'src/assets/styles/animation';
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  border-radius: 5px;
+  color: $dark;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $accent;
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    display: inline-block;
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}

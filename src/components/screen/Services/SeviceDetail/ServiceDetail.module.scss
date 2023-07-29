@@ -1,0 +1,20 @@
+@import '/src/assets/styles/variable';
+@import '/src/assets/styles/_animation';
+
+.wrapper {
+  display: flex;
+  margin: 50px 70px;
+  justify-content: center;
+
+  align-items: center;
+  > .description {
+    padding-left: 100px;
+    > h1 {
+      text-align: center;
+    }
+    > h2 {
+      text-align: center;
+      margin: 20px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '/src/assets/styles/variable';
+
+.btn {
+  width: 80px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: $accent;
+  > span {
+    font-size: 12px;
+    color: $dark;
+    font-weight: 300;
+  }
+}

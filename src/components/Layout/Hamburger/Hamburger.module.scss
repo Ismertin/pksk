@@ -1,0 +1,116 @@
+@import "src/assets/styles/animation";
+@import "src/assets/styles/variable";
+
+.wrapper {
+  position: relative;
+  padding: 50px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  > button {
+    font-size: 30px;
+
+    > svg {
+      > path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%; /* Ширина меню */
+    height: 100vh; /* Высота меню */
+    background-color: $white_common;
+    transform: translateX(100%); /* Начальное положение меню за пределами экрана */
+    transition: transform 0.6s ease; /* Добавляем плавную анимацию при изменении свойства transform */
+    .active {
+      color: $accent;
+      transition: color 0.6s ease;
+      opacity: 0.6s;
+    }
+
+    > ul {
+      margin-top: 100px;
+      font-size: 36px;
+
+      > li {
+        margin-top: 20px;
+        opacity: 0;
+        animation: fade-in 0.3s forwards;
+        transition-delay: 0.3s;
+
+        &:nth-child(1) {
+          animation-delay: 0.5s;
+        }
+
+        &:nth-child(2) {
+          animation-delay: 0.6s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0.7s;
+        }
+
+
+      }
+    }
+
+    &.show {
+      transform: translateX(0%);
+    }
+
+    > ul {
+      list-style: none;
+
+      button {
+        font-size: 24px;
+      }
+
+      a {
+        color: $dark;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s ease;
+
+        &:hover,
+        &:focus {
+          color: $accent;
+
+          &::after {
+            width: 100%;
+            left: 0;
+            right: auto;
+            transition-delay: 0s;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          width: 0;
+          height: 1px;
+          background-color: $accent;
+          transition: width 0.4s ease, left 0.4s ease, right 0.4s ease, transition-delay 0.4s;
+        }
+      }
+
+
+    }
+  }
+}
+
+

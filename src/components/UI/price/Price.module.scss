@@ -1,0 +1,12 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  color: #333; /* Цвет текста можно настроить по вашему выбору */
+}
+
+.divider {
+  border-bottom: 1px solid #333; /* Цвет черты можно настроить по вашему выбору */
+  width: 20px; /* Ширина черты */
+}

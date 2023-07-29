@@ -1,0 +1,58 @@
+@import "/src/assets/styles/animation";
+@import "/src/assets/styles/variable";
+
+.input {
+ margin-top:5%;
+ justify-content: center;
+ align-items: center ;
+ background-color: transparent;
+ display: flex;
+ flex-direction: row;
+ border: none;
+ border-bottom: 1px solid $white;
+ color: $white;
+ font-size: 18px;
+ padding: 12px;
+ outline: none;
+ text-decoration: none;
+ width: 100%;
+ position: relative;
+ transition: all 1s ease;
+
+ &::placeholder {
+  color: rgba($white, 40%);
+
+ }
+ &:focus,
+ :hover{
+  color: rgba($white, 90%);
+  border-color: $accent;
+
+ }
+
+ &:focus {
+  &::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 1px;
+   background-color: rgba($accent, 0.3);
+   animation: lineAnimation 0.3s forwards;
+  }
+ }
+
+ &:hover {
+  &::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 1px;
+   background-color: rgba($accent, 0.3);
+   animation: lineAnimation 0.3s forwards;
+  }
+ }
+}
